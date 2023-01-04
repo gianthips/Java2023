@@ -3,24 +3,29 @@ package chap03.lecture;
 public class Application4 {
 
 	public static void main(String[] args) {
+	/*여러 개의 전달 인자를 이용한 메소드 호출 테스트*/
 		Application4 app4 = new Application4();
-		app4.testMethod(20);
-		//app3.testMethod(20,30); //인자로 전달하는 값의 갯수와 매개변수의 갯수가 일치하지 않으면 호출할 수 없다.
-		//app3.testMethod("40");  //인자로 전달하는 값의 자료형과 매개변수의 자료형이 일치하지 않으면 호출할 수 없다.
-		//app3.testMethod();  //매개변수는 선언되어 있지만 인자로 값을 전달하지 않으면 호출할 수 없다.
-		
-		// 변수에 저장한 값 전달 테스트
+		app4.testMethod("홍길동", 20, '남');
+		//app4.testMethod(20,"유관순",'여');
+		String name = "유관순";
 		int age = 20;
-		app4.testMethod(age);
+		char gender = '여';
 		
-		//자동형변환을 이용해서 값 전달 테스트
-		byte byteAge = 10;
-		app4.testMethod(byteAge);
-		
-		//강제형변환 이용하여 값 전달도 가능하고 연산 결과를 이용해서 값 전달도 가능하다.
+		app4.testMethod(name, age, gender);
 	}
 	
-	public void testMethod(int age) {
-		System.out.println("당신의 나이는" + age + "세 입니다.");
+	
+	/**
+	 * 문서화 주석을 달기도 함. 
+	 * <pre>
+	 * 이름과 나이의 성별을 전달 받아 한 번에 출력해주는 기능을 제공합니다.
+	 * </pre>
+	 * @param name 출력할 이름을 전달해주세요
+	 * @param age 출력할 나이를 전달해주세요
+	 * @param gender 출력할 성별을 전달해주세요. 성별은 변경되지 않을 것을 보장합니다.
+	 * */
+	public void testMethod(String name, int age, final char gender) {
+		//final
+		System.out.println("당신의 이름은" + name + "이고, 나이는" + age + "세 이며, 성별은" + gender + "입니다.");
 	}
 }
