@@ -45,6 +45,18 @@ public class Application1 {
 		int d = 40;
 		
 		System.out.println("a가 b보다 작으면서 c가 d보다 작은지 확인:" + (a<b && c<d));
+		
+		/*3. 영어 대문자인지 확인 */
+		char capital = 'G';
+		System.out.println("영어 대문자인지 확인:" + (capital >= 'A' && capital <= 'Z'));
+		
+		char notcapital = 'g';
+		System.out.println("영어 대문자인지 확인:" + (notcapital >= 'A' && notcapital <= 'Z'));
+		
+		char ch123 = 'Z';
+		int aa = (int)ch123;
+		System.out.println("영문자인지 확인:" + ((aa>=97 && aa<=122)||(aa>=65 && aa<=90)));
+		//형변환 안하고 그냥 ch123>='A' 또는 ch123 >= 97 이런식으로 해도 무방
 	}
 
 }
