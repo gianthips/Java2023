@@ -66,13 +66,13 @@ public class Application1 {
 		/*삼항연산자*/
 		/*(조건식)? 참일 때 사용할 값: 거짓일 때 사용할 값; */
 		
-		int num1 = 10;
+		int num123 = 10;
 		int num2 = -10;
 		
-		String result1 = (num1 > 0)? "양수다": "양수가 아니다.";
+		String result123 = (num123 > 0)? "양수다": "양수가 아니다.";
 		String result2 = (num2 > 0)? "양수다": "양수가 아니다.";
 		
-		System.out.println("num1은 " + result1);
+		System.out.println("num1은 " + result123);
 		System.out.println("num2는 " + result2);
 		
 		/* 중첩 사용 가능 */
