@@ -5,22 +5,37 @@ import java.util.Scanner;
 public class Application5 {
 	
 	public static void main(String[] args) {
-		Scanner sc = new Scanner(System.in);
+		Scanner sc1 = new Scanner(System.in);
+		Scanner sc2 = new Scanner(System.in); //객체를 새로 만들어주지 않으면 오류난다.
 			
-//		System.out.print("정수를 하나 입력하세요");
-//		int i1 = sc.nextInt();
-//		
-//		System.out.print("정수를 하나 입력하세요");
-//		int i2 = sc.nextInt();
+		System.out.print("정수를 하나 입력하세요: ");
+		int i1 = sc1.nextInt();
 		
-		System.out.print("연산기호(+43, -45, *42, /47, %37) 중 하나를 입력하세요");
-		String cal = sc.nextLine();
-		int caltest = Integer.valueOf(cal);
+		System.out.print("정수를 하나 입력하세요: ");
+		int i2 = sc1.nextInt();
 		
-		if((caltest == 43) || (caltest == 45)||(caltest == 42)||(caltest == 47)||(caltest == 37)) {
-			System.out.print("연산기호를 제대로 입력하였습니다.");			
+		System.out.print("연산기호(+, -, *, /, %) 중 하나를 입력하세요: ");
+		char cal = sc2.nextLine().charAt(0);
+		int calVal = (int)cal;
+	
+		
+//		연산기호 해당 코드 +43, -45, *42, /47, %37
+		if((calVal == 43) || (calVal == 45)||(calVal == 42)||(calVal == 47)||(calVal == 37)) {
+			System.out.println("연산기호를 제대로 입력하였습니다. 연산 결과는 아래와 같습니다.");
+			if(calVal == 43) {
+				System.out.println(i1+i2);			
+			}else if(calVal == 45) {
+				System.out.println(i1-i2);
+			}else if(calVal == 42) {
+				System.out.println(i1*i2);				
+			}else if(calVal == 47) {
+				System.out.println(i1/i2);				
+			}else {
+				System.out.println(i1%i2);				
+			}
+			
 		}else {
-			System.out.print("연산기호를 제대로 입력하세요");
+			System.out.print("연산기호를 제대로 입력하세요.");
 		}
 		
 //		String c = sc.nextLine();
