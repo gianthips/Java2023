@@ -28,8 +28,7 @@ public class Application7 {
 		}else {
 			lowest = "수학";
 		}		
-		
-		
+				
 		if(average>=60) {
 			if((ko>=40)&&(en>=40)&&(ma>=40)) {
 				System.out.println("평균 점수는 "+average+"으로, 합격입니다.");

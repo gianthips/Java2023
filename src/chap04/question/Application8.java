@@ -1,4 +1,6 @@
-package com.greedy.section01.conditional.level04.advanced;
+package chap04.question;
+
+import java.util.Scanner;
 
 public class Application8 {
 
