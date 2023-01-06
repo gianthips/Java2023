@@ -187,8 +187,20 @@ public class A_for {
 				}
 			}else {
 				System.out.print("반드시 2~9 사이의 양수를 입력해야 합니다.");
-			}
+			}			
+		}
+		
+		public void printTriangleStart() {
+			Scanner sctr = new Scanner(System.in);
+			System.out.print("줄 수를 입력하세요: ");
+			int line = sctr.nextInt();
 			
+			for(int i = 1; i<=line ; i++){
+					System.out.println();
+				for(int j = 1; j<=i; j++){
+					System.out.print("*");					
+				}
+			}
 			
 		}
 		

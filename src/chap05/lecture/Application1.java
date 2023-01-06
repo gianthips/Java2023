@@ -9,8 +9,9 @@ public class Application1 {
 //		a.testForExample();
 //		a.testForExample2();
 //		a.testForExample3();
-//		a.testForExample4();
-		a.printSimpleGugudan();
+////		a.testForExample4();
+//		a.printSimpleGugudan();
+		a.printTriangleStart();
 	}
 	
 
