@@ -13,7 +13,4 @@ public class Application1 {
 //		a.printSimpleGugudan();
 		a.printTriangleStart();
 	}
-	
-
-
 }
