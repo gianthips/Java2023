@@ -1,5 +1,7 @@
 package chap06.lecture;
 
+import java.util.Scanner;
+
 public class dowhile {
 	public void testSimpleDoWhileStatement() {
 //		do-while문 표현식
@@ -13,5 +15,21 @@ public class dowhile {
 		}while(false);
 			
 		System.out.println("반복문 종료 확인...");
+	}
+	
+	public void testDoWhileExample1() {
+		/*키보드 문자열을 입력받아 반복적으로 출력
+		 * 단, exit이 입력되면 반복문을 종료한다.
+		 */
+		Scanner sc = new Scanner(System.in);
+		String str = "";
+		
+		do {
+			System.out.print("문자열을 입력하세요:");
+			str = sc.nextLine();
+			System.out.println(str);
+		}while(!str.equals("exit"));//exit가 입력되지 않는 한 반복적으로 실행
+		
+		System.out.println("프로그램을 종료합니다.");
 	}
 }
