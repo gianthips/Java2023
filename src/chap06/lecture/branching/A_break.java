@@ -46,5 +46,17 @@ public class A_break {
 			System.out.println();
 		}
 	}
+	
+	public void testJumpBreak() {
+		label:
+		for(;;) {
+			for(int i = 0; i<10 ; i++) {
+				System.out.println(i);
+				if(i == 3) {
+					break label; //이렇게 label을 붙이면 0~3까지만 출력됨.
+				}
+			}
+		}
+	}
 
 }
