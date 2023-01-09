@@ -11,7 +11,7 @@ public class Application1 {
 		
 		//a.testWhileExample2();		
 		//a.testWhileExample3();
-		a.testWhileExample4();
+		//a.testWhileExample4();
 	}
 
 }
