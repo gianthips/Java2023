@@ -1,6 +1,6 @@
 package chap07_object.abstraction;
 
-public class car {
+public class Car {
 
 	private boolean isOn;//기본값은 false이다.
 	//공유해야한다면 전역변수로 선언. 메소드에 넣지 말고.
@@ -45,10 +45,10 @@ public class car {
 				System.out.println("달리는 상태에서 시동을 끌 수 없습니다. 차를 우선 멈춰주세요.");
 			}else {
 				isOn = false;
-				System.out.println("시동을 끕니다. 다시 운행하려면 시동을 켜주세요.")
+				System.out.println("시동을 끕니다. 다시 운행하려면 시동을 켜주세요.");
 			}			
 		}else {
-			System.out.println("이미 시동이 꺼져있는 상태입니다. 시동 상태를 확인해주세요.")
+			System.out.println("이미 시동이 꺼져있는 상태입니다. 시동 상태를 확인해주세요.");
 		}
 	}
 	
