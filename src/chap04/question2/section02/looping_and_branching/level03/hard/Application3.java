@@ -8,20 +8,39 @@ public class Application3 {
 		Scanner sc = new Scanner(System.in);
 		
 		System.out.println("문자열을 입력하세요: ");
-		String strtotal = sc.next();
+		String strtotal = sc.nextLine();
+		int i = strtotal.length();
+		int arr[] = new int[i]; 
 				
 		System.out.println("검색할 문자를 입력하세요: ");
-		String strsearch = sc.next();
-		int strsearchint = (int)strsearch;
+		char ss = sc.next().charAt(0);
+		int strsearch = (int)ss;
+				
+//		System.out.println(strtotal);
+//		System.out.println(strsearch);
+//		arr[1] = (int)strtotal.charAt(0)
 		
-		
-		System.out.println(strtotal);
-		int i = strtotal.length();
-		
-		for(k=1;)
-		
-		
-		
+		int k=0;
+		int s=0;
+		int bb=0;
+		while(k<i) {
+			arr[k] = (int)strtotal.charAt(k);
+			
+			if ((65<=arr[k]&&arr[k]<=90)||(97<=arr[k]&&arr[k]<=122)) {
+				if (arr[k]==strsearch) {
+					s++;
+				}else{}				
+			}else {
+				System.out.println("문자열에 영문자가 아닌 문자가 포함되어 있습니다.");
+				bb = 1;
+				break;
+			}
+//			System.out.println(arr[k]);
+			k++;
+		}
+		if(bb!=1) {
+		System.out.println("검색하려는 문자 " +ss+"는 "+"총 "+s+"개입니다.");}
+		else {}
 		/* 문자열을 하나 입력 받고, 검색할 문자를 입력 하여
 		 * 입력받은 문자열에서 검색할 문자가 몇 개 포함되어 있는지를 출력하는 프로그램을 만드세요
 		 * 
