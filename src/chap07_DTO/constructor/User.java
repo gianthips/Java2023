@@ -35,18 +35,49 @@ public class User {
 	
 	public User() {	//생성자 이름은 클래스와 동일해야 한다. 그리고 여기에서 void를 붙인다던가. 그러면 일반 메소드라고 생각해서 안된다. public void User로 하면 메소드다.
 		System.out.println("User 클래스의 기본생성자를 호출함...");
+	}	
+	
+	/*매개변수 있는 생성자*/
+	public User(String id, String pwd, String name) {		
+		this.id = id;
+		this.pwd = pwd;
+		this.name = name;		
+		
+		System.out.println(this);
+		System.out.println("User 클래스의 id, pwd, name을 초기화하는 생성자를 호출함");			
 	}
 	
 	
-	/*매개변수 있는 생성자*/
-	public User(String id, String pwd, String name) {
+	public User(String id, String pwd, String name, java.util.Date enrollDate) {
+//		this.id = id;
+//		this.pwd = pwd;
+//		this.name = name; 
 		
-		this.id = id;
-		this.pwd = pwd;
-		this.name = name;
+		this(id, pwd, name); 
+		//줄이기 위해. 기존 생성자 재사용. 
+		//윗줄에 작성. 괄호 안에 인자로 전달한 값과 생성자에 선언된 매개변수의 타입, 갯수, 순서가 일치하는 생성자를 호출.
+		//생성자 내부의 실행하는 코드를 다 실행 후 호출 구문으로 복귀한다.
+		//린턴되어 돌아오지만 리턴값은 존재하지 않는다.
+		this.enrollDate = enrollDate;
 		
-		System.out.println("User 클래스의 id, pwd, name을 초기화하는 생성자를 호출함");
-			
+		System.out.println("User 클래스의 모든 필드를 초기화하는 생성자를 호출함");
+	}
+//	
+//	복사생성자
+//	이미 만들어진 동일한 타입의 인스턴스가 가지는 필드값을 이용해서 새로운 인스턴스를 생성 시 초기값으로 이용할 수 있따.
+//	동일한 값을 가지지만 새롭게 할당되는 인스턴스이기 때문에 서로 다른 주소값을 가지게 된다.
+//	
+	public User(User otherUser) {
+//		this.id = otherUser.id;
+//		this.pwd = otherUser.pwd;
+//		this.name = otherUser.name;
+//		this.enrollDate = otherUser.enrollDate;
+		
+		this(otherUser.id, otherUser.pwd, otherUser.name, otherUser.enrollDate);
+		
+		System.out.println("User 클래스의 복사 생성자를 호출함...");
+		System.out.println(this.hashCode());
+		System.out.println(otherUser.hashCode());
 	}
 	
 	public String getInformation() {
