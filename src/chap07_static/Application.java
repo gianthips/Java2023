@@ -25,7 +25,10 @@ public class Application {
 		smt.nonStaticMethod();
 		
 		StaticMethodTest.staticMethod(); //인스턴스 생성 없이 호출해야 함. 
-//		smt.staticMethod(); 굳이 인스턴스를 생성하여 접근 가능하긴 하다.
+//		smt.staticMethod(); 굳이 인스턴스를 생성하여 접근 가능하긴 하다. 그러나 권장하지는 않음.
+		
+//		Math.PI public static final double임
+//		Math.abs(-1); 메소드만 호출해서 사용하라는 의미.
 	}
 
 }
