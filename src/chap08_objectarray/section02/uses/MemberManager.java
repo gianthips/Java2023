@@ -18,6 +18,15 @@ public class MemberManager {
 	
 	public void printAllMembers() {
 		
+		MemberDTO[] selectedMembers = new MemberSelectManager().selectAllMembers();
+		
+		System.out.println("---가입된 회원 목록---");
+		for(MemberDTO member : selectedMembers) {
+			System.out.println(member.getInformation());
+		}
+		System.out.println("-------");
+		System.out.println("총"+selectedMembers.length+"명의 회원이 가입되어 있습니다.");
+		
 	}
 	
 }
