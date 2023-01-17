@@ -16,8 +16,7 @@ public class Master {
 //		this.amount = 0;
 //		this.price = 0;
 //		this.sum = 0;
-//	}
-	//일단 초기화는 관두자.
+//	} //일단 초기화는 관두자.
 	
 	//호출 시 메뉴를 알려준다.
 	public void menuNotice() {
@@ -40,10 +39,8 @@ public class Master {
 		this.amount = new int[species];
 		this.price = new int[species];
 		this.sum = new int[species];
-		
-		
+				
 	}
-
 	
 	//호출 시 주문하려는 김밥의 각 종류별 갯수를 입력받는다.
 	public void orderSpecies() {
