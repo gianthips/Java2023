@@ -12,5 +12,4 @@ public class Application{
 		System.out.println(gt2.getValue());
 		System.out.println(gt2.getValue() instanceof String);
 	}
-
 }
