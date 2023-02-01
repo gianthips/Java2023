@@ -40,8 +40,6 @@ public class Application2 {
 					e.printStackTrace();
 				}
 			}
-		}
-		
+		}		
 	}
-
 }
