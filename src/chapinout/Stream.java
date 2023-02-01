@@ -42,6 +42,9 @@ public class Stream {
 			if(fin!=null) {
 				try{
 					/*자원(resource)를 반납 혹은 해지라고 한다.*/
+//					장기간 실행중인 프로그램에서 스트림을 닫지 않는 경우 다양한 리소스에서 누수(leak)가 발생할 가능성이 있다,
+//					뒤에서 배우는 버퍼를 이용하는 경우 마지막에 flush()로 버퍼에 있는 데이터를 강제로 전송해야 한다.
+//					만약 잔류 데이터가 남은 상태에서 추가로 스트림을 사용하면 데드락(deadlock)상태가 된다.
 					fin.close();
 				} catch(IOException e) {
 					e.printStackTrace();
