@@ -38,6 +38,15 @@ public class Stream {
 			e.printStackTrace();
 		} catch(IOException e) {
 			e.printStackTrace();
+		} finally {
+			if(fin!=null) {
+				try{
+					/*자원(resource)를 반납 혹은 해지라고 한다.*/
+					fin.close();
+				} catch(IOException e) {
+					e.printStackTrace();
+				}
+			}
 		}
 		
 		
